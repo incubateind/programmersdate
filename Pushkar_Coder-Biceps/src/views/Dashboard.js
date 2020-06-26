@@ -26,6 +26,10 @@ class Maps extends Component {
       Facebook: 0,
       Instagram: 0,
       WhatsApp: 0,
+      YouTube: 0,
+      Pinterest: 0,
+      Linked: 0,
+      Tik: 0,
       showPopover: [
         false,
         false,
@@ -476,12 +480,16 @@ class Maps extends Component {
   };
 
 
-  savestate = (loc, fb, ins, wh) => {
+  savestate = (loc, fb, ins, wh, yt, pin, linked, tik) => {
     this.setState({
       Location: loc,
       Facebook: fb,
       Instagram: ins,
-      WhatsApp: wh
+      WhatsApp: wh,
+      YouTube: yt,
+      Pinterest: pin,
+      Linked: linked,
+      Tik: tik
     })
   };
 
@@ -514,6 +522,12 @@ class Maps extends Component {
                                 Facebook : {this.state.Facebook}% | WhatsApp : {this.state.WhatsApp}% | Instagram : {this.state.Instagram}%
 
                           </p>
+                              <br />
+                              <p className="title">
+
+                                YouTube : {this.state.YouTube}% | Pinterest : {this.state.Pinterest}% | TikTok : {this.state.Tik}% | LinkedIn : {this.state.Linked}%
+
+</p>
                             </td>
 
                           </tr>
@@ -562,7 +576,7 @@ class Maps extends Component {
                     >
                       {this.state.data.map((data, id) => (
                         <Marker
-                          onClick={this.savestate.bind(this, data.loc, data.Facebook, data.Instagram, data.WhatsApp)}
+                          onClick={this.savestate.bind(this, data.loc, data.Facebook, data.Instagram, data.WhatsApp, data.YouTube, data.Pinterest, data.LinkedIn, data.TikTok)}
                           onMouseEnter={this.onTogglePopover.bind(this, true, id)}
                           onMouseLeave={this.onTogglePopover.bind(this, false, id)}
                           key={id}
