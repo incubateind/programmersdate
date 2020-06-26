@@ -2,6 +2,92 @@ import React from "react";
 
 // reactstrap components
 import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
+import ReactFC from 'react-fusioncharts';
+
+// Include the fusioncharts library
+import FusionCharts from 'fusioncharts';
+
+//Import FusionMaps
+import FusionMaps from 'fusioncharts/maps/es/fusioncharts.india';
+import INDIA from 'fusioncharts/fusioncharts.maps'
+
+// Include the theme as fusion
+import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+
+// Adding the chart and theme as dependency to the core fusioncharts
+ReactFC.fcRoot(FusionCharts, FusionMaps, INDIA, FusionTheme);
+
+const colorrange = {
+    "minvalue": "920000",
+    "startlabel": "Low",
+    "endlabel": "High",
+    "code": "#e44a00",
+    "gradient": "0",
+    "color": [{
+        "maxvalue": "56580000",
+        "displayvalue": "Facebook",
+        "code": "#1877f2"
+    }, {
+        "maxvalue": "97400000",
+        "displayvalue": "YouTube",
+        "code": "#ff0000"
+    },
+    {
+        "maxvalue": "56580000",
+        "displayvalue": "Quora",
+        "code": "#aa2200"
+    },
+    {
+        "maxvalue": "56580000",
+        "displayvalue": "Instagram",
+        "code": "#c32aa3"
+    },
+    {
+        "maxvalue": "56580000",
+        "displayvalue": "Twitter",
+        "code": "#1da1f2"
+    },
+    {
+        "maxvalue": "56580000",
+        "displayvalue": "Pinterest",
+        "code": "#bd081c"
+    },
+    {
+        "maxvalue": "56580000",
+        "displayvalue": "LinkedIn",
+        "code": "#007bb5"
+    }
+    ]
+};
+
+// STEP 3 - Creating the JSON object to store the chart configurations
+const chartConfigs = {
+    type: 'india', // The chart type
+    width: '550', // Width of the chart
+    height: '550', // Height of the chart
+    dataFormat: 'json', // Data type
+    dataSource: {
+        // Map Configuration
+        "chart": {
+            "showBorder": "1",
+            "borderColor": "#666666",
+            "borderThickness": "1",
+            "borderAlpha": "80",
+            "bgColor": "#27293d",
+            // "caption": "Social Trend in India",
+            "subcaption": "Social Trend in India",
+            // "numbersuffix": "%",
+            // "includevalueinlabels": "1",
+            // "labelsepchar": ": ",
+            "entityFillHoverColor": "#ffac33",
+            "theme": "fusion"
+        },
+        // Aesthetics; ranges synced with the slider
+        "colorrange": colorrange,
+        // Source data as JSON --> id represents countries of the world.
+        // "data": dataset
+    }
+}
 
 const QuickGuide = () => (
     <div className="content">
@@ -18,7 +104,11 @@ const QuickGuide = () => (
 
                     <CardBody>
 
+
+
                         <h4>Digital and Social Media Landscape in India</h4>
+
+                        <ReactFC {...chartConfigs} />
 
                         <h5 className="text-success" style={{ marginLeft: "5em" }}>INTERNET PENETRATION & AUDIENCE</h5>
                         <p className="text-primary" style={{ marginLeft: "5em", marginBottom: "2em" }}>

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { HereMap, Marker } from "rc-here-maps";
-import axios from "axios";
 import virus from "./virus_map.png";
 import cured from "./cured_map.png";
 import dead from "./dead_map.png";
