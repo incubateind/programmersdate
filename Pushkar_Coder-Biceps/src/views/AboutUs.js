@@ -19,12 +19,12 @@ const AboutUs = () => (
 
             <h5 className="text-success" style={{ marginLeft: "5em" }}>1.1 Pushkar Tandon</h5>
             <p className="text-primary" style={{ marginLeft: "5em", marginBottom: "2em" }}>
-              Github : <a href to="https://github.com/tandonpushkar" target="_blank" rel="noopener noreferrer">https://github.com/tandonpushkar</a>
+              Github : <a href="https://github.com/tandonpushkar" target="_blank" rel="noopener noreferrer">https://github.com/tandonpushkar</a>
             </p>
 
             <h5 className="text-success" style={{ marginLeft: "5em" }}>1.2 Akash Shah</h5>
             <p className="text-primary" style={{ marginLeft: "5em", marginBottom: "2em" }}>
-              Github : <a href to="https://github.com/akashshah03" target="_blank" rel="noopener noreferrer">https://github.com/akashshah03</a>
+              Github : <a href="https://github.com/akashshah03" target="_blank" rel="noopener noreferrer">https://github.com/akashshah03</a>
             </p>
           </CardBody>
         </Card>
