@@ -1,0 +1,145 @@
+<%- include('partials/header') %>
+
+<!-- MENU -->
+<section class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        class="navbar-toggle"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+      >
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+      </button>
+
+      <!-- lOGO TEXT HERE -->
+      <a href="/" class="navbar-brand">Know Ur Bed <i class="fa fa-bed"></i></a>
+    </div>
+
+    <!-- MENU LINKS -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/" class="smoothScroll">Home</a></li>
+        <li>
+          <a href="/" class="smoothScroll">Logout</a>
+        </li>
+        <li><a href="https://covid19.who.int/" class="smoothScroll">Covid-19 Dashboard</a></li>
+        <li><a href="/feedback" class="smoothScroll">Get Help</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!--user name and table-->
+<table style="width: 100%;">
+  <tr>
+    <td>
+      <h4 class="last">
+        <i class="fas fa-user-alt"></i> Username : <%= name %>
+      </h4>
+    </td>
+
+    <td>
+      <h4 class="right"><i class="fas fa-map-marker"></i> Location :</h4>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+<!-- CORONA TABLE -->
+
+<div onload="fetch()">
+<table class="table table-bordered table-hover" id="tbval">
+  <thead class="thead-dark">
+    <tr class="bg-primary">
+      <th scope="col">State <i class="fas fa-place-of-worship"></i></th>
+      <th scope="col">Total Hospitals <i class="fa fa-hospital"></i></th>
+      <th scope="col">Total Beds <i class="fa fa-bed"></i></th>
+    </tr>
+  </thead>
+</table>
+
+</div>
+
+<!-- MAPS Body -->
+
+<style>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #map {
+    height: 100%;
+  }
+</style>
+
+<div id="map"></div>
+
+
+
+<!-- CORONA API  -->
+
+<script>
+async function getHospitalapi() {
+  const jsondata = await fetch(
+    "https://api.rootnet.in/covid19-in/hospitals/beds"
+  );
+  const jsdata = await jsondata.json();
+  var tbval = document.getElementById("tbval");
+  for (var i = 0; i < 35; i++) {
+    var x = tbval.insertRow();
+    x.insertCell(0);
+    tbval.rows[i+1].cells[0].innerHTML = jsdata.data.regional[i+1].state;
+    x.insertCell(1);
+    tbval.rows[i+1].cells[1].innerHTML = jsdata.data.regional[i+1].totalHospitals;
+    x.insertCell(2);
+    tbval.rows[i+1].cells[2].innerHTML = jsdata.data.regional[i+1].totalBeds;
+  }
+}
+getHospitalapi();
+</script>
+
+<!-- MAPS API -->
+
+<script>
+  var map;
+  function initMap(){
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 6
+  });
+}
+  var infoWindow = new google.maps.InfoWindow({map: map});
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+          var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+          };
+          infoWindow.setPosition(pos);
+          infoWindow.setContent('Location found.');
+          map.setCenter(pos);
+      }, function() {
+          handleLocationError(true, infoWindow, map.getCenter());
+      });
+  } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+  }
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+      infoWindow.setPosition(pos);
+      infoWindow.setContent(browserHasGeolocation ?
+                            'Error: The Geolocation service failed.' :
+                            'Error: Your browser doesn\'t support geolocation.');
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2Fb8DAv_nPeI-WHubFMGALP5Cb446tlg&callback=initMap" async defer></script>
+
+
+<%- include('partials/footer') %>
