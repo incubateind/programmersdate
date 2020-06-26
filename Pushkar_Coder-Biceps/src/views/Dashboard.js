@@ -115,211 +115,351 @@ class Maps extends Component {
         "WhatsApp": 40,
         "Instagram": 10,
         "loc": "Andaman and Nicobar Islands",
-        "Facebook": 50
+        "Facebook": 50,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 45,
         "Instagram": 11,
         "loc": "Andhra Pradesh",
-        "Facebook": 10
+        "Facebook": 10,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 22,
         "Instagram": 10,
         "loc": "Arunachal Pradesh",
-        "Facebook": 14
+        "Facebook": 14,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 37,
         "Instagram": 19,
         "loc": "Assam",
-        "Facebook": 58
+        "Facebook": 58,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 61,
         "Instagram": 56,
         "loc": "Bihar",
-        "Facebook": 81
+        "Facebook": 81,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 32,
         "Instagram": 16,
         "loc": "Chandigarh",
-        "Facebook": 41
+        "Facebook": 41,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 15,
         "Instagram": 12,
         "loc": "Chhattisgarh",
-        "Facebook": 23
+        "Facebook": 23,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 29,
         "Instagram": 0,
         "loc": "Dadra and Nagar Haveli and Daman and Diu",
-        "Facebook": 12
+        "Facebook": 12,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 39,
         "Instagram": 23,
         "loc": "Delhi",
-        "Facebook": 66
+        "Facebook": 66,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 20,
         "Instagram": 1,
         "loc": "Goa",
-        "Facebook": 90
+        "Facebook": 90,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 20,
         "Instagram": 17,
         "loc": "Gujarat",
-        "Facebook": 28
+        "Facebook": 28,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 64,
         "Instagram": 17,
         "loc": "Haryana",
-        "Facebook": 11
+        "Facebook": 11,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 44,
         "Instagram": 8,
         "loc": "Himachal Pradesh",
-        "Facebook": 77
+        "Facebook": 77,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 36,
         "Instagram": 87,
         "loc": "Jammu and Kashmir",
-        "Facebook": 62
+        "Facebook": 62,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 15,
         "Instagram": 11,
         "loc": "Jharkhand",
-        "Facebook": 21
+        "Facebook": 21,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 60,
         "Instagram": 15,
         "loc": "Karnataka",
-        "Facebook": 97
+        "Facebook": 97,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 18,
         "Instagram": 22,
         "loc": "Kerala",
-        "Facebook": 34
+        "Facebook": 34,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 14,
         "Instagram": 1,
         "loc": "Ladakh",
-        "Facebook": 93
+        "Facebook": 93,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 93,
         "Instagram": 52,
         "loc": "Madhya Pradesh",
-        "Facebook": 12
+        "Facebook": 12,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 69,
         "Instagram": 65,
         "loc": "Maharashtra",
-        "Facebook": 13
+        "Facebook": 13,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 25,
         "Instagram": 10,
         "loc": "Manipur",
-        "Facebook": 92
+        "Facebook": 92,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 37,
         "Instagram": 10,
         "loc": "Meghalaya",
-        "Facebook": 46
+        "Facebook": 46,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 90,
         "Instagram": 10,
         "loc": "Mizoram",
-        "Facebook": 14
+        "Facebook": 14,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 14,
         "Instagram": 10,
         "loc": "Nagaland",
-        "Facebook": 33
+        "Facebook": 33,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 39,
         "Instagram": 17,
         "loc": "Odisha",
-        "Facebook": 54
+        "Facebook": 54,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 16,
         "Instagram": 90,
         "loc": "Puducherry",
-        "Facebook": 40
+        "Facebook": 40,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 30,
         "Instagram": 10,
         "loc": "Punjab",
-        "Facebook": 43
+        "Facebook": 43,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 12,
         "Instagram": 36,
         "loc": "Rajasthan",
-        "Facebook": 15
+        "Facebook": 15,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 29,
         "Instagram": 10,
         "loc": "Sikkim",
-        "Facebook": 79
+        "Facebook": 79,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 35,
         "Instagram": 83,
         "loc": "Tamil Nadu",
-        "Facebook": 64
+        "Facebook": 64,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 42,
         "Instagram": 22,
         "loc": "Telangana",
-        "Facebook": 95
+        "Facebook": 95,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 80,
         "Instagram": 10,
         "loc": "Tripura",
-        "Facebook": 12
+        "Facebook": 12,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 16,
         "Instagram": 30,
         "loc": "Uttarakhand",
-        "Facebook": 25
+        "Facebook": 25,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 12,
         "Instagram": 58,
         "loc": "Uttar Pradesh",
-        "Facebook": 18
+        "Facebook": 18,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       },
       {
         "WhatsApp": 92,
         "Instagram": 58,
         "loc": "West Bengal",
-        "Facebook": 14
+        "Facebook": 14,
+        "YouTube": 20,
+        "Pinterest": 2,
+        "LinkedIn": 5,
+        "TikTok": 80
       }
     ];
     this.setState({
@@ -469,40 +609,6 @@ class Maps extends Component {
       );
     } else return "Hey";
   }
-}
-
-
-function Info(prop) {
-  return (
-    <div className="col-sm-12">
-      <p className="lead">Map Legends</p>
-      <p className="d-inline p-2">
-        State :{" "}
-        <span>
-          <img src={marker} alt="cases" />
-        </span>
-      </p>
-
-      <p className="d-inline  p-2">
-        Total cases :{" "}
-        <span>
-          <img src={virus} alt="cases" />
-        </span>
-      </p>
-      <p className="d-inline  p-2">
-        Cured :{" "}
-        <span>
-          <img src={cured} alt="cases" />
-        </span>
-      </p>
-      <p className="d-inline  p-2">
-        Instagram :{" "}
-        <span>
-          <img src={dead} alt="cases" />
-        </span>
-      </p>
-    </div>
-  );
 }
 
 export default Maps;
