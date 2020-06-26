@@ -1,0 +1,16 @@
+.pagination {
+  display: flex;
+  @include list-unstyled();
+  @include border-radius();
+
+}
+.pagination a {
+  transition: background-color .3s;
+  color: #ba54f5;
+  font-weight: bold;
+  float: left;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+
+.pagination a:hover:not(.active) {background-color: #2f2f33;}
