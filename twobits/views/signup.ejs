@@ -1,0 +1,77 @@
+<%- include('partials/header') %>
+
+<!-- MENU -->
+<section class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        class="navbar-toggle"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+      >
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+      </button>
+
+      <!-- lOGO TEXT HERE -->
+      <a href="/" class="navbar-brand">BedIn <i class="fa fa-bed"></i></a>
+    </div>
+
+    <!-- MENU LINKS -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/" class="smoothScroll">Home</a></li>
+        <li>
+          <a href="/login" class="smoothScroll">Login</a>
+        </li>
+        <li>
+          <a href="https://covid19.who.int/" class="smoothScroll"
+            >Covid-19 Dashboard</a
+          >
+        </li>
+        <li><a href="/feedback" class="smoothScroll">Get Help</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Signup Form -->
+
+<div class="container mt-5">
+  <h1><i class="fas fa-user-plus"></i> Signup</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+          <!-- Makes POST request to /register route -->
+          <form action="/signup" method="POST">
+            <div class="form-group">
+              <label for="nickname"><i class="fas fa-user-circle"></i> Username</label>
+              <input type="nickname" class="form-control" name="nickname" />
+            </div>
+            <div class="form-group">
+              <label for="email"><i class="fas fa-at"></i> Email</label>
+              <input type="email" class="form-control" name="username" />
+            </div>
+            <div class="form-group">
+              <label for="password"><i class="fas fa-lock"></i> Password</label>
+              <input type="password" class="form-control" name="password" />
+            </div>
+            <button
+              type="submit"
+              class="section-btn btn btn-default smoothScroll"
+            >
+              Signup
+            </button>
+          </form>
+          <small class="form-text text-muted"><strong>Or, Signup With</strong></small>
+          <button class="btn btn-lg"><a href="/auth/google" role="button"><i class="fab fa-google"></a></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/header') %>
