@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+    	<title>Phoenix Project</title>
+    
+		<link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+    	<link rel="stylesheet" type="text/css" href="css/template.css" />		
+		<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    	
+    	<script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    	<script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    	<script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    	<script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+	</head>
+  
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-black">
+            <a class="navbar-brand" href="#">PHOENIX</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">				
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    	<a class="nav-link" href="#">Home</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-link" href="#">Documentation</a>
+                    </li>
+                </ul>
+			</div>
+        </nav>
+		
+		<div id="subscribe">
+				<div class="container">
+					<div class="row my-2">
+						<div class="col-md-8 lead">
+							<p>Want to learn about <b>Bed Availabilities</b> in hospitals near you?</p>
+							<p>Sign up for our newsletter now!</p>
+						</div>
+						<div class="col-md-4">
+							<div class="input-group">
+						  		<input type="text" class="form-control" placeholder="Email Address" id="SignUpEmail">
+								<button type="button" class="md-btn btn btn-primary m-0 px-3 py-0" id="signUpToggle">Sign Up!</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<section id="section1">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<h1>Find available beds in nearby hospitals for free!</h1>
+						<p class="text-muted" id="jumbo-p">Accessible, intuitive and for all! Are you still struggling to find the accurate information about the availability of bed in hospitals nearby? </p>
+						<p class="text-muted">Sign Up and get notified whenever a bed becomes available!</p>
+						<button class="md-btn btn btn-dark">Sign Up</button>	
+					</div>
+
+					<div class="col-md-3 d-none d-md-none d-lg-block">
+						<i class="fa fa-5x fa-hospital-o" aria-hidden="true"></i>	
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="section3" class="position-relative overflow-hidden text-center bg-light">
+			<h2>Try Now!</h2>
+			<br>
+			<br>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<i class="fa fa-globe" aria-hidden="true"></i>
+						<h3>Browse</h3>
+						<p>Scan through a huge collection of hospitals available with HERE API and find the best hospitals near you in just a click!</p>
+					</div>
+					<div class="col-md-4">
+						<i class="fa fa-heartbeat" aria-hidden="true"></i>
+						<h3>Track</h3>
+						<p>Follow any specific hospital near you and get instant notification to your Inbox whenever a bed becomes available!</p>
+					</div>
+					<div class="col-md-4">
+						<i class="fa fa-ambulance" aria-hidden="true"></i>
+						<h3>Refer</h3>
+						<p>Facing emergency circumstances? Refer the patient to the nearest hospital with a bed available instantly! </p>	
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!--MODAL-->
+		<div class="modal fade" id="success-modal" tabindex="-1" role="dialog">
+		  	<div class="modal-dialog" role="document">
+				<div class="modal-content modal-success">
+			  		<div class="modal-body">
+						<p id="message" class="lead text-center mb-0"></p>
+			  		</div>
+				</div>
+		  	</div>
+		</div>		
+		
+		<div id="map" class="my-6"></div>
+		
+		<section id="section4" class="text-center bg-light">
+			<div class="text-center">
+				<h2>Have a burning question?</h2>
+				<p class="lead mx-auto">Feel free to reach us at contact@example.com and we will try to resolve your queries at the earliest.</p>
+			</div>
+		</section>
+		
+		<!--Footer-->
+        <footer class="page-footer center-on-small-only stylish-color-dark mt-3">
+            <!--Call to action-->
+                <div class="call-to-action row">
+                    <ul class="col-lg-6">
+                        <li>
+                            <h5 class="mb-1">Sign Up for free</h5>
+                        </li>
+                        <li><a href="#" data-toggle="modal" data-target="#signup" class="md-btn btn btn-danger">Sign up!</a></li>
+                    </ul>
+                    <ul class="col-lg-6">
+                        <li>
+                            <h5 class="mb-1">Donate Today</h5>
+                        </li>
+                        <li><a href="" class="md-btn btn btn-success">Donate</a></li>
+                    </ul>
+                </div>
+                            
+            <!--/.Call to action-->
+
+            <hr>
+
+            <!--Social buttons-->
+            <div class="social-section text-center">
+                <ul>
+                    <li><a class="btn-floating btn-sm btn-fb" href=""><i class="fa fa-facebook"> </i></a></li>
+                    <li><a class="btn-floating btn-sm btn-tw" href=""><i class="fa fa-twitter"> </i></a></li>
+                    <li><a class="btn-floating btn-sm btn-gplus" href=""><i class="fa fa-google-plus"> </i></a></li>
+                    <li><a class="btn-floating btn-sm btn-li" href=""><i class="fa fa-linkedin"> </i></a></li>
+                </ul>
+            </div>
+            <!--/.Social buttons-->
+
+            <!--Copyright-->
+            <div class="footer-copyright">
+                <div class="container-fluid">
+                    © 2020 Copyright: <a href="#"> Phoenix </a>
+                </div>
+            </div>
+            <!--/.Copyright-->
+
+        </footer>
+        <!--/.Footer-->
+		
+		<!-- jQuery first, then Tether, then Bootstrap JS. -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/effects.js"></script>
+		<script type="text/javascript" src="js/dropdown.js"></script>
+  	</body>
+</html>
