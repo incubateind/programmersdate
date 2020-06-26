@@ -2,7 +2,7 @@
   "name": "programmersdate",
   "version": "1.0.0",
   "description": "BedIn is a Project Build Under Programmer's Date Hackathon",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Sushant2/programmersdate.git"
   },
-  "author": "Sushant",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Sushant2/programmersdate/issues"
