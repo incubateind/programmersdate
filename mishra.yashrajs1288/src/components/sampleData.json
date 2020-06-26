@@ -1,0 +1,168 @@
+{
+  "type": "FeatureCollection",
+  "etag": "3da8384bcc2a9daf4b04dce12b44acf8",
+  "features": [
+    {
+      "id": "f864fdf898cdd8bf527afe2126e02001",
+      "type": "Feature",
+      "properties": {
+        "totalBed": 32,
+        "equiptedBed": 34,
+        "availableBed": 10,
+        "hospitalName": "ABC hospital1",
+        "@ns:com:here:xyz": {
+          "tags": ["sampledata"],
+          "space": "H8TuI2tP",
+          "createdAt": 1591535387485,
+          "updatedAt": 1591540052361
+        },
+        "emergencyContact": 7568851001
+      },
+      "geometry": { "type": "Point", "coordinates": [73.700088, 26.179662, 0] }
+    },
+    {
+      "id": "b1a87d89892153672c82b5f0d000a42b",
+      "type": "Feature",
+      "properties": {
+        "totalBed": 23,
+        "equiptedBed": 34,
+        "availableBed": 9,
+        "hospitalName": "ABC hospital2",
+        "@ns:com:here:xyz": {
+          "tags": ["sampledata"],
+          "space": "H8TuI2tP",
+          "createdAt": 1591535387485,
+          "updatedAt": 1591540053792
+        },
+        "emergencyContact": 7568851001
+      },
+      "geometry": { "type": "Point", "coordinates": [72, 26.179662, 0] }
+    },
+    {
+      "id": "92b20c1ec8a1339add21f4a90a7fabeb",
+      "type": "Feature",
+      "properties": {
+        "totalBed": 12,
+        "equiptedBed": 12,
+        "availableBed": 8,
+        "hospitalName": "ABC hospital3",
+        "@ns:com:here:xyz": {
+          "tags": ["sampledata"],
+          "space": "H8TuI2tP",
+          "createdAt": 1591535387485,
+          "updatedAt": 1591540055465
+        },
+        "emergencyContact": 7568851001
+      },
+      "geometry": { "type": "Point", "coordinates": [71, 26, 0] }
+    },
+    {
+      "id": "4381c30f56c0f8dc5b3530284ecc27db",
+      "type": "Feature",
+      "properties": {
+        "totalBed": 43,
+        "equiptedBed": 32,
+        "availableBed": 7,
+        "hospitalName": "ABC hospital4",
+        "@ns:com:here:xyz": {
+          "tags": ["sampledata"],
+          "space": "H8TuI2tP",
+          "createdAt": 1591535387485,
+          "updatedAt": 1591540057623
+        },
+        "emergencyContact": 7568851001
+      },
+      "geometry": { "type": "Point", "coordinates": [76, 26, 0] }
+    },
+    {
+      "id": "a05e4264f59f58a98689ca6fa8fcfabe",
+      "type": "Feature",
+      "properties": {
+        "totalBed": 12,
+        "equiptedBed": 12,
+        "availableBed": 6,
+        "hospitalName": "ABC hospital5",
+        "@ns:com:here:xyz": {
+          "tags": ["sampledata"],
+          "space": "H8TuI2tP",
+          "createdAt": 1591535387485,
+          "updatedAt": 1591540058576
+        },
+        "emergencyContact": 7568851001
+      },
+      "geometry": { "type": "Point", "coordinates": [75, 25, 0] }
+    },
+    {
+      "id": "0c5b71ac7c43c31f1050d35567584b26",
+      "type": "Feature",
+      "properties": {
+        "totalBed": 23,
+        "equiptedBed": 32,
+        "availableBed": 5,
+        "hospitalName": "ABC hospital6",
+        "@ns:com:here:xyz": {
+          "tags": ["sampledata"],
+          "space": "H8TuI2tP",
+          "createdAt": 1591535387485,
+          "updatedAt": 1591540060611
+        },
+        "emergencyContact": 7568851001
+      },
+      "geometry": { "type": "Point", "coordinates": [77, 25, 0] }
+    },
+    {
+      "id": "cc42ea4f9ca0bb2b47e4b8b10130d05e",
+      "type": "Feature",
+      "properties": {
+        "totalBed": 23,
+        "equiptedBed": 13,
+        "availableBed": 4,
+        "hospitalName": "ABC hospital7",
+        "@ns:com:here:xyz": {
+          "tags": ["sampledata"],
+          "space": "H8TuI2tP",
+          "createdAt": 1591535387485,
+          "updatedAt": 1591540061928
+        },
+        "emergencyContact": 7568851001
+      },
+      "geometry": { "type": "Point", "coordinates": [74, 24, 0] }
+    },
+    {
+      "id": "8253103547200ced51328ef0df37f047",
+      "type": "Feature",
+      "properties": {
+        "totalBed": 12,
+        "equiptedBed": 42,
+        "availableBed": 3,
+        "hospitalName": "ABC hospital8",
+        "@ns:com:here:xyz": {
+          "tags": ["sampledata"],
+          "space": "H8TuI2tP",
+          "createdAt": 1591535387485,
+          "updatedAt": 1591540063554
+        },
+        "emergencyContact": 7568851001
+      },
+      "geometry": { "type": "Point", "coordinates": [74, 23, 0] }
+    },
+    {
+      "id": "cdfb9998e94a45d2831a2d7a793f7b46",
+      "type": "Feature",
+      "properties": {
+        "totalBed": 43,
+        "equiptedBed": 34,
+        "availableBed": 2,
+        "hospitalName": "ABC hospital9",
+        "@ns:com:here:xyz": {
+          "tags": ["sampledata"],
+          "space": "H8TuI2tP",
+          "createdAt": 1591535387485,
+          "updatedAt": 1591540067815
+        },
+        "emergencyContact": 7568851001
+      },
+      "geometry": { "type": "Point", "coordinates": [75, 22, 0] }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "name": "hospital-bed-tracking",
+  "description": "A application to get current available hospital beds",
+  "version": "0.2.4",
+  "author": "Yashraj Mishra <mishra.yashrajs@gmail.com>",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "gatsby": "^2.23.1",
+    "gatsby-plugin-react-helmet": "^3.3.3",
+    "gatsby-plugin-react-leaflet": "2.0.13",
+    "gatsby-plugin-resolve-src": "^2.1.0",
+    "gatsby-plugin-sass": "^2.3.3",
+    "gatsby-source-filesystem": "^2.3.10",
+    "leaflet": "^1.6.0",
+    "node-sass": "^4.14.1",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-data-table-component": "^6.9.3",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "react-leaflet": "^2.7.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "babel-preset-gatsby": "^0.4.8",
+    "enzyme": "^3.11.0",
+    "eslint": "^7.2.0",
+    "eslint-config-zurgbot": "^0.0.7",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.9",
+    "prettier": "^2.0.5",
+    "prettier-eslint": "^10.1.1",
+    "prettier-eslint-cli": "^5.0.0"
+  },
+  "keywords": [
+    "hospitals",
+    "gatsby",
+    "sass",
+    "india",
+    "leaflet",
+    "mapping",
+    "maps",
+    "covid-19"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby clean && gatsby build",
+    "clean": "gatsby clean",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "yarn develop",
+    "serve": "gatsby serve",
+    "test": "here xyz upload H8TuI2tP -f extra/sampleData.csv -s"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "yarn format"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yashrajmishra/hospital-bed-tracking"
+  },
+  "bugs": {
+    "url": "https://github.com/yashrajmishra/hospital-bed-tracking/issues"
+  }
+}
