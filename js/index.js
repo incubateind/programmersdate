@@ -3,10 +3,10 @@
  *
  * @param  {H.Map} map      A HERE Map instance within the application
  */
-function moveMapToBerlin(map){
-  map.setCenter({lat:52.5159, lng:13.3777});
-  map.setZoom(14);
-}
+//function moveMapToBerlin(map){
+//  map.setCenter({lat:52.5159, lng:13.3777});
+//  map.setZoom(14);
+//}
 
 var latitude = 52.5159;
 var longitude = 13.3777;
@@ -65,8 +65,15 @@ function generateMap(map, mapData) {
 
 function plotPoint(point) {
 	console.log(point);
+	var id = point.id;
 	var lat = point.position.lat;
 	var lng = point.position.lng;
+	var name = point.title;
+	var city = point.address.city;
+	var county = point.address.county;
+	var country = point.address.countryName;
+	var postalCode = point.address.postalCode;
+	var distance = point.distance;
 	
 	var locationMarker = new H.map.Marker({ lat: lat, lng: lng });
 	
@@ -79,7 +86,9 @@ function plotPoint(point) {
 		var bubble = new H.ui.InfoBubble({ lng: lng, lat: lat }, {
                 content: ''
              });
-		bubble.setContent('<div style="height: 130px; overflow: auto; width: 270px;"><h3>"First Input"</h3><p>"Second Input"</p></div>');
+		bubble.setContent(
+			"<div style='height: 130px; overflow: auto; width: 270px;'><h5>Name: " + name + "</h5><p class='mb-0'>City: " + city + "</p><p class='mb-0'>County: " + county + "</p><p class='mb-0'>Postal Code: " + postalCode + "</p><p class='mb-0'>Distance: " + distance + " km</p><a href='#'>Know More...</a></div>"
+		);
 		
 		// Add info bubble to the UI
 		ui.addBubble(bubble);
