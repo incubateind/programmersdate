@@ -88,13 +88,13 @@ function plotCurrentLocation(latitude, longitude) {
 function plotPoint(point) {
 	console.log(point);
 	var id = point.id;
-	var lat = point.position.lat;
-	var lng = point.position.lng;
+	var lat = point.lat;
+	var lng = point.lng;
 	var name = point.title;
-	var city = point.address.city;
-	var county = point.address.county;
-	var country = point.address.countryName;
-	var postalCode = point.address.postalCode;
+	var city = point.city;
+	var county = point.county;
+	var country = point.countryName;
+	var postalCode = point.postalCode;
 	var distance = (point.distance/1000).toFixed(2);
 	
 	var locationMarker = new H.map.Marker({ lat: lat, lng: lng });
