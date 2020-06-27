@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "Fortis",
+    "address": "B-22, Vishwakarma Rd, Rasoolpur Nawada, Industrial Area, Sector 62,",
+    "city": "Noida",
+    "pincode": 201301,
+    "phone": 123456789,
+    "email": "fortis@gmail.com",
+    "description": "",
+    "services": "Urology. Cardiac Sciences. Adult CTVS (Cardiothoracic and Vascular Surgery) Interventional Cardiology.",
+    "bed_count": 242,
+    "position": { "lat": 28.6185, "lng": 77.3726 }
+  },
+  {
+    "id": 2,
+    "name": "AIIMS",
+    "address": "Sri Aurobindo Marg, Ansari Nagar, Ansari Nagar East, New Delhi,",
+    "city": "new delhi",
+    "pincode": 110029,
+    "phone": 1234567890,
+    "email": "AIIMS@gmail.com",
+    "description": "",
+    "services": " Paediatrics Cardiac Sciences. Cosmetology. Dermatology. Diabetes / Endocrinology. Diabetes.",
+    "bed_count": 124,
+    "position": { "lat": 28.5672, "lng": 77.21 }
+  },
+  {
+    "id": 3,
+    "name": "Ganga Ram hospital",
+    "address": "Sarhadi Gandhi Marg, near Bal Bharati Public School, Old Rajinder Nagar, Rajinder Nagar, New Delhi,",
+    "city": "new delhi",
+    "pincode": 110060,
+    "phone": 45636,
+    "email": "ganag@gmail.com",
+    "description": "",
+    "services": " Metabolic Surgery. Emergency Medicine. ENT. Gastroenterology and Hepatology Sciences. Liver Transplant. Laparoscopic Surgery.",
+    "bed_count": 200,
+    "position": { "lat": 28.639475, "lng": 77.189829 }
+  },
+  {
+    "id": 4,
+    "name": "Jaypee Hospital",
+    "address": "Jaypee Hospital Rd, Goberdhanpur, Sector 128, Noida, Uttar Pradesh ",
+    "city": "noida",
+    "pincode": 201304,
+    "phone": 123456,
+    "email": "jaype@gmail.com",
+    "description": "",
+    "services": "Metabolic Surgery. Emergency Medicine. ENT. Gastroenterology and Hepatology Sciences. Liver Transplant. Laparoscopic Surgery.",
+    "bed_count": 147,
+    "position": { "lat": 28.515473, "lng": 77.371438 }
+  }
+]
