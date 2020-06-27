@@ -1,0 +1,25 @@
+body{
+    color: white;
+    background-color: black;
+}
+body > div.ui.main.text.container > div > div:nth-child(1) > div > a {
+    color:white !important;
+}
+body > div.ui.main.text.container > div > div:nth-child(2) > div > a {
+    color:white !important;
+}
+body > div.ui.main.text.container > h1 {
+    color: white;
+}
+p,hr,h1,h3 {
+    color: white !important;
+}
+.dark {
+    color: white !important;
+}
+body > div.ui.text.container > h2 > div > div{
+    color: aliceblue !important;
+}
+.content{
+    color: white !important;
+}
