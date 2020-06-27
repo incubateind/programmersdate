@@ -15,7 +15,7 @@ function moveMapToBerlin(map){
 //Step 1: initialize communication with the platform
 // In your own code, replace variable window.apikey with your own apikey
 var platform = new H.service.Platform({
-  apikey: 'H6XyiCT0w1t9GgTjqhRXxDMrVj9h78ya3NuxlwM7XUs'
+  apikey: 'lUG-hi8SVgFZqxxI8-TGTndI2Vxiu-19ihGvzANv2WU'
 });
 var defaultLayers = platform.createDefaultLayers();
 

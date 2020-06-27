@@ -2,7 +2,7 @@ var Hospital = require("./Hospital");
 
 // var lat = 12.96643;
 // var lng = 77.5871;
-var API_KEY = "G_WGx9co0WoqH2B7vX-cW8xMClpnVtLtYllIb5phH00";
+var API_KEY = "lUG-hi8SVgFZqxxI8-TGTndI2Vxiu-19ihGvzANv2WU";
 var lim = 10;
 // var URL = "https://discover.search.hereapi.com/v1/discover?at=12.96643,77.5871&q=hospital&apikey=" + API_KEY + "&limit=5"
 
