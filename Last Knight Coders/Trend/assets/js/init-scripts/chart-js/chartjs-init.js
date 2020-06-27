@@ -171,17 +171,17 @@
     var myChart = new Chart( ctx, {
         type: 'line',
         data: {
-            labels: [ "January", "February", "March", "April", "May", "June", "July" ],
+            labels: [ "January", "February", "March", "April", "May", "June" ],
             datasets: [
                 {
-                    label: "My First dataset",
+                    label: "Last Year",
                     borderColor: "rgba(0,0,0,.09)",
                     borderWidth: "1",
                     backgroundColor: "rgba(0,0,0,.07)",
                     data: [ 22, 44, 67, 43, 76, 45, 12 ]
                             },
                 {
-                    label: "My Second dataset",
+                    label: "Currentt Year",
                     borderColor: "rgba(0, 123, 255, 0.9)",
                     borderWidth: "1",
                     backgroundColor: "rgba(0, 123, 255, 0.5)",
@@ -211,17 +211,17 @@
     var myChart = new Chart( ctx, {
         type: 'bar',
         data: {
-            labels: [ "January", "February", "March", "April", "May", "June", "July" ],
+            labels: [ "January", "February", "March", "April", "May", "June" ],
             datasets: [
                 {
-                    label: "My First dataset",
+                    label: "Current Year",
                     data: [ 65, 59, 80, 81, 56, 55, 40 ],
                     borderColor: "rgba(0, 123, 255, 0.9)",
                     borderWidth: "0",
                     backgroundColor: "rgba(0, 123, 255, 0.5)"
                             },
                 {
-                    label: "My Second dataset",
+                    label: "Last Year",
                     data: [ 28, 48, 40, 19, 86, 27, 90 ],
                     borderColor: "rgba(0,0,0,0.09)",
                     borderWidth: "0",
@@ -242,129 +242,8 @@
 
 
 
-    //pie chart
-    var ctx = document.getElementById( "pieChart" );
-    ctx.height = 300;
-    var myChart = new Chart( ctx, {
-        type: 'pie',
-        data: {
-            datasets: [ {
-                data: [ 45, 25, 20, 10 ],
-                backgroundColor: [
-                                    "rgba(0, 123, 255,0.9)",
-                                    "rgba(0, 123, 255,0.7)",
-                                    "rgba(0, 123, 255,0.5)",
-                                    "rgba(0,0,0,0.07)"
-                                ],
-                hoverBackgroundColor: [
-                                    "rgba(0, 123, 255,0.9)",
-                                    "rgba(0, 123, 255,0.7)",
-                                    "rgba(0, 123, 255,0.5)",
-                                    "rgba(0,0,0,0.07)"
-                                ]
+  
 
-                            } ],
-            labels: [
-                            "green",
-                            "green",
-                            "green"
-                        ]
-        },
-        options: {
-            responsive: true
-        }
-    } );
-
-    //doughut chart
-    var ctx = document.getElementById( "doughutChart" );
-    ctx.height = 150;
-    var myChart = new Chart( ctx, {
-        type: 'doughnut',
-        data: {
-            datasets: [ {
-                data: [ 45, 25, 20, 10 ],
-                backgroundColor: [
-                                    "rgba(0, 123, 255,0.9)",
-                                    "rgba(0, 123, 255,0.7)",
-                                    "rgba(0, 123, 255,0.5)",
-                                    "rgba(0,0,0,0.07)"
-                                ],
-                hoverBackgroundColor: [
-                                    "rgba(0, 123, 255,0.9)",
-                                    "rgba(0, 123, 255,0.7)",
-                                    "rgba(0, 123, 255,0.5)",
-                                    "rgba(0,0,0,0.07)"
-                                ]
-
-                            } ],
-            labels: [
-                            "green",
-                            "green",
-                            "green",
-                            "green"
-                        ]
-        },
-        options: {
-            responsive: true
-        }
-    } );
-
-    //polar chart
-    var ctx = document.getElementById( "polarChart" );
-    ctx.height = 150;
-    var myChart = new Chart( ctx, {
-        type: 'polarArea',
-        data: {
-            datasets: [ {
-                data: [ 15, 18, 9, 6, 19 ],
-                backgroundColor: [
-                                    "rgba(0, 123, 255,0.9)",
-                                    "rgba(0, 123, 255,0.8)",
-                                    "rgba(0, 123, 255,0.7)",
-                                    "rgba(0,0,0,0.2)",
-                                    "rgba(0, 123, 255,0.5)"
-                                ]
-
-                            } ],
-            labels: [
-                            "green",
-                            "green",
-                            "green",
-                            "green"
-                        ]
-        },
-        options: {
-            responsive: true
-        }
-    } );
-
-    // single bar chart
-    var ctx = document.getElementById( "singelBarChart" );
-    ctx.height = 150;
-    var myChart = new Chart( ctx, {
-        type: 'bar',
-        data: {
-            labels: [ "Sun", "Mon", "Tu", "Wed", "Th", "Fri", "Sat" ],
-            datasets: [
-                {
-                    label: "My First dataset",
-                    data: [ 40, 55, 75, 81, 56, 55, 40 ],
-                    borderColor: "rgba(0, 123, 255, 0.9)",
-                    borderWidth: "0",
-                    backgroundColor: "rgba(0, 123, 255, 0.5)"
-                            }
-                        ]
-        },
-        options: {
-            scales: {
-                yAxes: [ {
-                    ticks: {
-                        beginAtZero: true
-                    }
-                                } ]
-            }
-        }
-    } );
 
 
 
