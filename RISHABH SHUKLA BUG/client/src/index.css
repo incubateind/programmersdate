@@ -1,0 +1,104 @@
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(90, 65, 65);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00000086;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f8ffbf;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-wrapper a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.auth-tab-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.create-form-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.MuiTabs-flexContainer {
+  justify-content: space-between;
+}
+.hospital-card-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.hospital-card-wrapper .MuiCard-root {
+  margin: 10px 5vw;
+}
+.profile-page-wrapper {
+  margin: 30px 30vw;
+}
+.profile-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.profile-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.hospital-select-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
+}
+.create-form-element .MuiTextField-root {
+  margin: 4px 3px;
+  width: 18vw;
+}
+.dashboard-checkbox-wrapper p {
+  margin-top: 50px;
+  margin-left: 20px;
+  border-bottom: solid 0.4px #00000085;
+}
+.dashboard-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 78vh;
+}
+.hospital-list-map {
+  height: 500px;
+  overflow-y: scroll;
+}
+.dashboard-outer-wrapper {
+  margin-top: 60px;
+  /* background-color: white; */
+}
