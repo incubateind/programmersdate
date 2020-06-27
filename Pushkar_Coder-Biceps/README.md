@@ -1,17 +1,34 @@
-SITE URL 
 
-Github URL https://github.com/tandonpushkar
 
-You need to have npm installed before you follow these steps
+# Social Trends
 
-STEPS:
+> Site URL : https://socialtrend-coderbiceps.netlify.app/
 
-(i) Open command prompt in this directory
+> Team Name : coder-biceps
 
-(ii) Write npm install ---It will download all the dependancies required for the project this will take some time depending on your Internet speed.
+> Pushkar Tandon : https://github.com/tandonpushkar
 
-(iii)Write npm start in command prompt and hit enter
+> Akash Shah : https://github.com/akashshah03
 
-(iv)The server will start running and you will be able to see the website live.
 
-(v) For any query please contact tandonpushkar@gmail.com
+## Table of Contents (Optional)
+
+- [Social Trends](#social-trends)
+  - [Table of Contents (Optional)](#table-of-contents-optional)
+  - [Installation](#installation)
+  - [Team](#team)
+
+
+---
+
+## Installation
+
+- npm install
+- npm start
+
+## Team
+
+- Pushkar Tandon
+- Akash Shah
+
+
