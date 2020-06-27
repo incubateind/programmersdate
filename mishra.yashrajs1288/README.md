@@ -1,4 +1,4 @@
-# 🏥🛌 Hospital Bed Tracker
+# 🏥🛌 Hospital Bed Tracker (Team GrownUps)
 
 A application to get current available hospital beds!
 
