@@ -27,6 +27,9 @@ const AboutUs = () => (
 
             <h5 className="text-success" style={{ marginLeft: "5em" }}>1.2 Akash Shah</h5>
             <p className="text-primary" style={{ marginLeft: "5em", marginBottom: "2em" }}>
+              Github: <a href="https://github.com/akashshah03" target="_blank" rel="noopener noreferrer">Profile Link</a>
+            </p>
+            <p className="text-primary" style={{ marginLeft: "5em", marginBottom: "2em" }}>
               LinkedIn : <a href="https://www.linkedin.com/in/akash-shah-b92977193/" target="_blank" rel="noopener noreferrer">Profile Link</a>
             </p>
           </CardBody>
