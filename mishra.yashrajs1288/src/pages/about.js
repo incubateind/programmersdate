@@ -13,7 +13,7 @@ const AboutPage = () => {
       </Helmet>
       <Container text style={{ marginTop: "7em" }}>
         <Header as="h1">About Project</Header>
-        <p>this is made for hackathon challenged by my friend Anuj Sharma</p>
+        <p>this project is my Submission for Programmers date by IncubateIND</p>
       </Container>
     </Layout>
   );
