@@ -99,6 +99,36 @@ function plotPoint(point, index) {
 	var postalCode = point.postalCode;
 	var distance = (point.distance/1000).toFixed(2);
 	
+	if ((point.icu > 0) && (id == localStorage.icu)) {
+		$("#message").text("ICU Bed Available!!!");
+		$("#success-modal").modal("show");
+	}
+	
+	if ((point.covid > 0) && (id == localStorage.covid)) {
+		$("#message").text("Covid Bed Available!!!");
+		$("#success-modal").modal("show");
+	}
+	
+	if ((point.cardiology > 0) && (id == localStorage.cardiology)) {
+		$("#message").text("Cardiology Bed Available!!!");
+		$("#success-modal").modal("show");
+	}
+	
+	if ((point.neurology > 0) && (id == localStorage.neurology)) {
+		$("#message").text("Neurology Bed Available!!!");
+		$("#success-modal").modal("show");
+	}
+	
+	if ((point.xray > 0) && (id == localStorage.xray)) {
+		$("#message").text("X-Ray Bed Available!!!");
+		$("#success-modal").modal("show");
+	}
+	
+	if ((point.mri > 0) && (id == localStorage.mri)) {
+		$("#message").text("MRI Bed Available!!!");
+		$("#success-modal").modal("show");
+	}		
+	
 	var locationMarker = new H.map.Marker({ lat: lat, lng: lng });
 	
 	// Add the marker to the map
@@ -119,9 +149,11 @@ function plotPoint(point, index) {
 	});
 }
 
+var activeModal = -1;
 function populateModal(element) {
 	var parentId = $(element).parent().attr("id").split("-")[1];
 	var point = data[parentId];
+	activeModal = parentId;
 	
 	$("#hospital-modal #hospital-name").text(point.title);
 	$("#hospital-modal #hospital-city").text(point.city);
@@ -136,6 +168,150 @@ function populateModal(element) {
 	$("#hospital-modal #hospital-mri").text(point.mri);
 	$("#hospital-modal #hospital-distance").text((point.distance/1000).toFixed(2));
 }
+
+$("#icu-track").click(function() {
+	var hospitalID = data[activeModal].id;
+	var icuMarker = true;
+	var covidMarker = false;
+	var cardiologyMarker = false;
+	var neurologyMarker = false;
+	var xrayMarker = false;
+	var mriMarker = false;
+	
+	$.post("http://localhost:3000/set_marker", { 
+		hospital_id: hospitalID, 
+		icu_marker: icuMarker,
+		covid_marker: covidMarker,
+		cardiology_marker: cardiologyMarker,
+		neurology_marker: neurologyMarker,
+		xray_marker: xrayMarker,
+		mri_marker: mriMarker
+	});
+	
+	$("#icu-track").text("Tracking...");
+	
+	localStorage.setItem("icu", hospitalID);
+});
+
+$("#covid-track").click(function() {
+	var hospitalID = data[activeModal].id;
+	var icuMarker = false;
+	var covidMarker = true;
+	var cardiologyMarker = false;
+	var neurologyMarker = false;
+	var xrayMarker = false;
+	var mriMarker = false;
+	
+	$.post("http://localhost:3000/set_marker", { 
+		hospital_id: hospitalID, 
+		icu_marker: icuMarker,
+		covid_marker: covidMarker,
+		cardiology_marker: cardiologyMarker,
+		neurology_marker: neurologyMarker,
+		xray_marker: xrayMarker,
+		mri_marker: mriMarker
+	});
+	
+	$("#covid-track").text("Tracking...");
+	
+	localStorage.setItem("covid", hospitalID);
+});
+
+$("#cardiology-track").click(function() {
+	var hospitalID = data[activeModal].id;
+	var icuMarker = false;
+	var covidMarker = false;
+	var cardiologyMarker = true;
+	var neurologyMarker = false;
+	var xrayMarker = false;
+	var mriMarker = false;
+	
+	$.post("http://localhost:3000/set_marker", { 
+		hospital_id: hospitalID, 
+		icu_marker: icuMarker,
+		covid_marker: covidMarker,
+		cardiology_marker: cardiologyMarker,
+		neurology_marker: neurologyMarker,
+		xray_marker: xrayMarker,
+		mri_marker: mriMarker
+	});
+	
+	$("#cardiology-track").text("Tracking...");
+	
+	localStorage.setItem("cardiology", hospitalID);
+});
+
+$("#neurology-track").click(function() {
+	var hospitalID = data[activeModal].id;
+	var icuMarker = false;
+	var covidMarker = false;
+	var cardiologyMarker = false;
+	var neurologyMarker = true;
+	var xrayMarker = false;
+	var mriMarker = false;
+	
+	$.post("http://localhost:3000/set_marker", { 
+		hospital_id: hospitalID, 
+		icu_marker: icuMarker,
+		covid_marker: covidMarker,
+		cardiology_marker: cardiologyMarker,
+		neurology_marker: neurologyMarker,
+		xray_marker: xrayMarker,
+		mri_marker: mriMarker
+	});
+	
+	$("#neurology-track").text("Tracking...");
+	
+	localStorage.setItem("neurology", hospitalID);
+});
+
+$("#xray-track").click(function() {
+	var hospitalID = data[activeModal].id;
+	var icuMarker = false;
+	var covidMarker = false;
+	var cardiologyMarker = false;
+	var neurologyMarker = false;
+	var xrayMarker = true;
+	var mriMarker = false;
+	
+	$.post("http://localhost:3000/set_marker", { 
+		hospital_id: hospitalID, 
+		icu_marker: icuMarker,
+		covid_marker: covidMarker,
+		cardiology_marker: cardiologyMarker,
+		neurology_marker: neurologyMarker,
+		xray_marker: xrayMarker,
+		mri_marker: mriMarker
+	});
+	
+	$("#xray-track").text("Tracking...");
+	
+	localStorage.setItem("xray", hospitalID);
+});
+
+$("#mri-track").click(function() {
+	var hospitalID = data[activeModal].id;
+	var icuMarker = false;
+	var covidMarker = false;
+	var cardiologyMarker = false;
+	var neurologyMarker = false;
+	var xrayMarker = false;
+	var mriMarker = true;
+	
+	$.post("http://localhost:3000/set_marker", { 
+		hospital_id: hospitalID, 
+		icu_marker: icuMarker,
+		covid_marker: covidMarker,
+		cardiology_marker: cardiologyMarker,
+		neurology_marker: neurologyMarker,
+		xray_marker: xrayMarker,
+		mri_marker: mriMarker
+	});
+	
+	$("#mri-track").text("Tracking...");
+	
+	localStorage.setItem("mri", hospitalID);
+});
 
 //$(".map-point").click(function() {
 //	alert("HELLO")
