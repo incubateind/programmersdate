@@ -1,1 +1,15 @@
+Team Aadhya_documentation
 
+Working prototype video: 
+https://www.youtube.com/watch?v=syazNrSHaRw&feature=youtu.be
+
+Data_processing folder has readme.txt file which has details about performing data collection and cleaning to make the json file needed for plotting points on the Map based on the request
+
+Website_main has files related to web application and to make website live on local host 
+Import the folder into brackets/Atom or any IDE 
+
+Open Social_Trendometer folder and index.html needs to be previewed live inorder to interact with web application 
+
+team_aadhya.pdf and team_aadhya.pptx have details about the approach and implementation
+
+website_main_working_video.mov is based on interactions with web application
