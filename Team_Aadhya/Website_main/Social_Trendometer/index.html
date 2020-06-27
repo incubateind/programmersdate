@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=7; IE=EmulateIE9; IE=10" />
+  <meta name="keywords" content="createMarkerBars,barChart" />
+  <title>Social Trendometer</title>
+  <!-- Set up constants such as APP ID and token -->
+  <script type="text/javascript" src="../libs/hereAppIdAndToken.js"></script>
+  <!-- Bootstrap jQuery Library -->
+  <script type="text/javascript" src="../libs/jQl.min.js"></script>
+
+  <!-- Asynchronously the HERE Maps API for JavaScript -->
+  <script type="text/javascript" src="../libs/hereAsyncLoader.js"
+    id="HereMapsLoaderScript"
+    data-map-container="mapContainer"
+    data-params="maps"
+    data-callback="afterHereMapLoad"
+    data-libs="sidebar-control"
+    data-parent="demos/sidebar-component/" >
+  </script>
+
+  <script type="text/javascript" src="data/socialmediadata.js" /></script>
+
+  <style type="text/css">
+
+    #sidebar {
+      float:left; 
+      color: rgb(102, 102, 102);
+      height:300px;
+      margin: 0em;
+    }
+
+    #sidebar .nm_sidebar{
+
+      list-style: none;
+      width:250px;
+      height:270px;
+      overflow:auto;
+    }
+  </style>
+</head>
+<body class="small-map">
+  <h1>SOCIAL TRENDS COUNTRYWISE</h1>
+  <p>Select the country to view the social trends in the region</p>
+  <p> All the stats are in percentages</p>
+  <div id="mapContainer" style="width:540px; height:334px;float:left;" class="no-expand"></div>
+  <div id="sidebar"></div>
+  <br style="clear: both;">
+<script id="example-code" data-categories="marker" type="text/javascript">
+//<![CDATA[
+var map,
+  infoBubbles,
+  container;
+
+function BarChart(stops, tick) {
+  var that = this,
+    barSVG = ['<svg width="__MAXWIDTH__" height="__MAXHEIGHT__" xmlns="http://www.w3.org/2000/svg">',
+      '<rect stroke="#FFF" fill="__MAINCOLOR__" width="16" height="__VALUE__" x="__XOFFSET__" y="__YOFFSET__"/>',
+      '</svg>'],
+    svgParser = new nokia.maps.gfx.SvgParser();
+  // Helper function that allows us to easily set the text and color of our SVG marker.
+  that.createBars = function (data) {
+    var height,
+      color  = '#FF0000',
+      svg,
+      maxHeight = 0,
+      maxWidth = data.values.length * 16;
+
+    for (var i in data.values) {
+      var height = Math.round(data.values[i] / tick);
+      if (maxHeight < height) {
+        maxHeight = height;
+      }
+    }
+
+    svg = barSVG[0]
+      .replace(/__MAXHEIGHT__/g, maxHeight)
+      .replace(/__MAXWIDTH__/g, maxWidth);
+
+    for (var i in data.values) {
+      var height = Math.round(data.values[i] / tick);
+      svg = svg + barSVG[1].replace(/__VALUE__/g, height)
+        .replace(/__MAINCOLOR__/g, stops[i])
+        .replace(/__XOFFSET__/g, (i * 16))
+        .replace(/__YOFFSET__/g, (maxHeight - height));
+    }
+
+    svg = svg + barSVG[2];
+
+    return new nokia.maps.map.Marker([data.latitude, data.longitude], {
+      icon: new nokia.maps.gfx.GraphicsImage(svgParser.parseSvg(svg)),
+      anchor: new nokia.maps.util.Point(maxWidth/2, maxHeight- 2)
+    });
+  };
+}
+
+function createMarkerBars(container, popData) {
+
+
+
+  var i = popData.length,
+    tick = 2, 
+    parties = [
+      '#FF0000',  //Red for facebook
+      '#0000CC',  //Blue for Pinterest
+      '#00CC00',  //Green for Twitter
+      '#CACA00',  //Yellow for Instagram
+      '#CC00CC',  //Purple for Youtube
+      '#8A8A8A'   //Grey for Tumblr
+    ],
+    barChart = new BarChart(parties, tick),
+    marker,
+    html;
+
+  while (i--) {
+    marker = barChart.createBars(popData[i]);
+    html = "<strong>" + popData[i].name + "</strong><br/>";
+    html = html + "Facebook" + popData[i].values[0] + "<br/>";
+    html = html + "Pinterest " + popData[i].values[1] + "<br/>";
+    html = popData[i].values[2] > 0 ? html + "Twitter" +
+      popData[i].values[2] + "<br/>": html;
+    html = popData[i].values[3] > 0 ? html + "Instagram" + 
+      popData[i].values[3] + "<br/>" : html;
+    html = popData[i].values[4] > 0 ? html + "Youtube" +
+      popData[i].values[4] + "<br/>" : html;
+    html = popData[i].values[5] > 0 ? html + "Tumblr" +
+      popData[i].values[5] + "<br/>": html;
+
+    marker.html = html;
+    marker.title = popData[i].name;
+    container.objects.add(marker);
+  }
+}
+
+
+function afterHereMapLoad(theMap) {
+  map = theMap;
+  infoBubbles = new nokia.maps.map.component.InfoBubbles();
+  map.set('zoomLevel', 6);
+  map.set('center', [52.500556, 13.398889]);
+  map.components.add(infoBubbles);
+  container = new Sidebar(document.getElementById('sidebar'),
+    {title : 'title'});
+  var TOUCH = nokia.maps.dom.Page.browser.touch,
+    CLICK = TOUCH ? 'tap' : 'click';
+  container.addListener(CLICK, function (evt) {
+    infoBubbles.openBubble(evt.target.html, evt.target.coordinate);
+    map.set('center', evt.target.coordinate);
+  }, false);
+  createMarkerBars(container, popData);
+  map.objects.add(container);
+}
+//]]>
+</script>
+<script type="text/javascript" src="../libs/prettyprint.js"></script>
+  </body>
+</html>
