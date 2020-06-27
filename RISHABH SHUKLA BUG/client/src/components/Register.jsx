@@ -10,6 +10,7 @@ import { Redirect } from "react-router";
 
 export default function AlertDialogSlide(props) {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(undefined);
   const [cookies, setCookie] = useCookies(["token"]);
@@ -23,6 +24,7 @@ export default function AlertDialogSlide(props) {
       .post("/api/user/register", {
         email,
         password,
+        name,
       })
       .then((response) => {
         if (response.status !== 200) {
@@ -56,6 +58,9 @@ export default function AlertDialogSlide(props) {
   const onPasswordInputChange = (event) => {
     setPassword(event.target.value);
   };
+  const onNameInputChange = (event) => {
+    setName(event.target.value);
+  };
 
   if (redirect) return <Redirect to="/" />;
 
@@ -82,6 +87,15 @@ export default function AlertDialogSlide(props) {
                 id="outlined-basic"
                 label="Email"
                 variant="outlined"
+              />
+            </div>
+            <div className="create-form-element">
+              <TextField
+                value={name}
+                onChange={onNameInputChange}
+                label="Name"
+                variant="outlined"
+                type="text"
               />
             </div>
             <div className="create-form-element">

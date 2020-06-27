@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import { Paper, Icon } from "@material-ui/core";
 import { Typography, TextField } from "@material-ui/core";
@@ -10,6 +10,7 @@ import BookAnAppointment from "./BookAnAppointemnt";
 import axios from "axios";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import HospitalInfo from "./HospitalInfo";
+import { Context } from "../Store";
 
 const commentData = [
   {
@@ -69,6 +70,7 @@ const commentData = [
 ];
 
 export default function LetterAvatars({ match }) {
+  const [state, dispatch] = useContext(Context);
   console.log(match.params.id);
   const [reviewComment, setReviewComment] = useState("");
   const [profileLoading, setProfileLoading] = useState(true);
@@ -220,8 +222,14 @@ export default function LetterAvatars({ match }) {
             color="#64b5f6"
             variant="contained"
             onClick={() => {
+              if (!state.isAuth) {
+                alert("You need to login first");
+                return;
+              }
               commentData.unshift({
-                name: "Blurry",
+                name: state.isHospital
+                  ? state.hospitalData.name
+                  : state.userData.name,
                 comment: reviewComment,
                 date: "27-06-2020",
               });

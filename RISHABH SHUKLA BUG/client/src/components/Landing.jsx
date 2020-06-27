@@ -3,6 +3,7 @@ import { HMap } from "./Hmap";
 import HospitalCards from "./HospitalCard";
 import { Paper, Typography, Button } from "@material-ui/core";
 import image from "../assets/map.svg";
+import { Link } from "react-router-dom";
 const Dashboard = () => {
   const API_URL = "http://localhost:5000/api/hospital/all";
   const [data, setData] = React.useState([]);
@@ -58,12 +59,14 @@ const Dashboard = () => {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          paddingBottom: 80
+          paddingBottom: 80,
         }}
       >
-        <Button variant="outlined" color="primary">
-          View All Hospitals
-        </Button>
+        <Link to="/hospital/all">
+          <Button variant="outlined" color="primary">
+            View All Hospitals
+          </Button>
+        </Link>
       </div>
     </div>
   );

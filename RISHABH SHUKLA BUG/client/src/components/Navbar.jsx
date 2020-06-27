@@ -70,7 +70,7 @@ export default function ButtonAppBar() {
                 Logged in as{" "}
                 {state.isHospital
                   ? state.hospitalData.name
-                  : state.userData.email}
+                  : state.userData.name}
               </Button>
             </NavLink>
           ) : (
