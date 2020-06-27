@@ -8,6 +8,9 @@ function moveMapToBerlin(map){
   map.setZoom(14);
 }
 
+var latitude = 52.5159;
+var longitude = 13.3777;
+
 /**
  * Boilerplate map initialization code starts below:
  */
@@ -39,5 +42,24 @@ var ui = H.ui.UI.createDefault(map, defaultLayers);
 
 // Now use the map as required...
 window.onload = function () {
-  moveMapToBerlin(map);
+	var requestURL = "http://localhost:3000/location/" + latitude + "/" + longitude;
+	
+	$.ajax({
+		url: requestURL,
+		type: 'GET',
+		crossDomain: true,
+		contentType: "text/json",
+		success: function (data) { 
+			generateMap(map, JSON.parse(data));
+		},
+		error: function (xhr, status, error) { 
+			console.log(error);
+		}
+	});
+	
+//  	moveMapToBerlin(map);
+}
+
+function generateMap(map, mapData) {
+	console.log(mapData)
 }
