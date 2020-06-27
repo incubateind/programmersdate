@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { HereMap, Marker } from "rc-here-maps";
-import virus from "./virus_map.png";
-import cured from "./cured_map.png";
-import dead from "./dead_map.png";
-import "./App.css";
-import marker from "./marker.png";
+import facebook from "../assets/img/facebook.png";
+import instagram from "../assets/img/instagram.png";
+import whatsapp from "../assets/img/whatsapp.png";
+import "../assets/demo/App.css";
+import marker from "../assets/img/marker.png";
 
 
 // reactstrap components
@@ -501,7 +501,7 @@ class Maps extends Component {
       return (
         <div className="content">
           <Row>
-            <Col lg="3" style={{ marginTop: "200px" }}>
+            <Col lg="4">
               <Card className="card-chart">
 
                 {this.state.Location !== "" ?
@@ -509,30 +509,52 @@ class Maps extends Component {
                   <>
                     <CardHeader>
                       <CardTitle tag="h2">
-                        {this.state.Location}
+                        Social media users in {this.state.Location}
                       </CardTitle>
                     </CardHeader>
                     <CardBody>
-                      <Table>
+
+
+                      <Table className="tablesorter">
+                        <thead className="text-primary">
+                          <tr>
+                            <th>Socail Media</th>
+                            <th>Usage %</th>
+                          </tr>
+                        </thead>
                         <tbody>
                           <tr>
-                            <td>
-                              <p className="title">
-
-                                Facebook : {this.state.Facebook}% | WhatsApp : {this.state.WhatsApp}% | Instagram : {this.state.Instagram}%
-
-                          </p>
-                              <br />
-                              <p className="title">
-
-                                YouTube : {this.state.YouTube}% | Pinterest : {this.state.Pinterest}% | TikTok : {this.state.Tik}% | LinkedIn : {this.state.Linked}%
-
-</p>
-                            </td>
-
+                            <td><a href="!#" target="_blank" rel="noopener noreferrer">Facebook </a></td>
+                            <td>{this.state.Facebook}%</td>
                           </tr>
+                          <tr>
+                            <td><a href="!#" target="_blank" rel="noopener noreferrer">WhatsApp</a></td>
+                            <td>{this.state.WhatsApp}%</td>
+                          </tr>
+                          <tr>
+                            <td><a href="!#" target="_blank" rel="noopener noreferrer"> Instagram</a></td>
+                            <td>{this.state.Instagram}%</td>
+                          </tr>
+                          <tr>
+                            <td><a href="!#" target="_blank" rel="noopener noreferrer">YouTube </a></td>
+                            <td>{this.state.YouTube}%</td>
+                          </tr>
+                          <tr>
+                            <td><a href="!#" target="_blank" rel="noopener noreferrer">Pinterest </a></td>
+                            <td>{this.state.Pinterest}%</td>
+                          </tr>
+                          <tr>
+                            <td><a href="!#" target="_blank" rel="noopener noreferrer">TikTok </a></td>
+                            <td>{this.state.Tik}%</td>
+                          </tr>
+                          <tr>
+                            <td><a href="!#" target="_blank" rel="noopener noreferrer">LinkedIn </a></td>
+                            <td>{this.state.Linked}%</td>
+                          </tr>
+
                         </tbody>
                       </Table>
+
                     </CardBody>
                   </>
                   : <>
@@ -590,19 +612,19 @@ class Maps extends Component {
                               <p className="lead">{data.loc}</p>
                               <p className="d-inline">
                                 <span>
-                                  <img src={virus} alt="virus" />
+                                  <img src={facebook} alt="facebook" />
                                   {" "}{data.Facebook}%{" "}
                                 </span>
                               </p>
                               <p className="d-inline">
                                 <span>
-                                  <img src={cured} alt="cured" />
+                                  <img src={instagram} alt="instagram" />
                                   {" "}{data.WhatsApp}%{" "}
                                 </span>
                               </p>
                               <p className="d-inline">
                                 <span>
-                                  <img src={dead} alt="Dead" />
+                                  <img src={whatsapp} alt="whatsapp" />
                                 </span>{" "}
                                 {" "}{data.Instagram}%{" "}
                               </p>
