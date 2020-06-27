@@ -1,0 +1,7 @@
+!!! TEAM EUREKA !!!
+
+The following project is a flutter based project
+
+The app tracks the number of beds avialable in the hospitals nearby and suggests the user the hospital on the basis of number of beds,availabilty of oxygen tanks, availabilty of ventilators, etc..
+
+we hope thatthis app might help users to chose the hospitals easily and inturn help in making proper arrangements for them being quarantiend  
