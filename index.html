@@ -111,11 +111,40 @@
 		</section>
 		
 		<!--MODAL-->
-		<div class="modal fade" id="success-modal" tabindex="-1" role="dialog">
+		<div class="modal fade" id="hospital-modal" tabindex="-1" role="dialog">
 		  	<div class="modal-dialog" role="document">
 				<div class="modal-content modal-success">
 			  		<div class="modal-body">
-						<p id="message" class="lead text-center mb-0"></p>
+						<h2 id="hospital-name" class="text-center mb-3"></h2>
+						<p class="lead">City: <span id="hospital-city"></span></p>
+						<p class="lead">County: <span id="hospital-county"></span></p>
+						<p class="lead">Country: <span id="hospital-country"></span></p>
+						<p class="lead">Postal Code: <span id="hospital-postal-code"></span></p>
+						<p class="lead">Distance: <span id="hospital-distance"></span> km</p>
+						<p class="lead"># of ICUs: 
+							<span id="hospital-icu"></span> 
+							<button type="button" class="md-btn btn btn-sm btn-primary ml-3" id="">Track Now</button>
+						</p>
+						<p class="lead"># of Covid Beds: 
+							<span id="hospital-covid"></span>
+							<button type="button" class="md-btn btn btn-sm btn-primary ml-3" id="">Track Now</button>
+						</p>
+						<p class="lead"># of Cardiology Beds: 
+							<span id="hospital-cardiology"></span>
+							<button type="button" class="md-btn btn btn-sm btn-primary ml-3" id="">Track Now</button>
+						</p>
+						<p class="lead"># of Neurology Beds: 
+							<span id="hospital-neurology"></span>
+							<button type="button" class="md-btn btn btn-sm btn-primary ml-3" id="">Track Now</button>
+						</p>
+						<p class="lead"># of X-Ray Beds: 
+							<span id="hospital-xray"></span>
+							<button type="button" class="md-btn btn btn-sm btn-primary ml-3" id="">Track Now</button>
+						</p>
+						<p class="lead"># of MRI Beds: 
+							<span id="hospital-mri"></span>
+							<button type="button" class="md-btn btn btn-sm btn-primary ml-3" id="">Track Now</button>
+						</p>
 			  		</div>
 				</div>
 		  	</div>

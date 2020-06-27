@@ -58,8 +58,10 @@ window.onload = function () {
 	});
 }
 
+var data;
 function generateMap(map, mapData) {
 //	console.log(mapData);
+	data = mapData;
 	plotCurrentLocation(latitude, longitude);
 	mapData.forEach(plotPoint);
 }
@@ -85,7 +87,7 @@ function plotCurrentLocation(latitude, longitude) {
 	});
 }
 
-function plotPoint(point) {
+function plotPoint(point, index) {
 	console.log(point);
 	var id = point.id;
 	var lat = point.lat;
@@ -109,10 +111,34 @@ function plotPoint(point) {
                 content: ''
              });
 		bubble.setContent(
-			"<div style='height: 130px; overflow: auto; width: 270px;'><h5>Name: " + name + "</h5><p class='mb-0'>City: " + city + "</p><p class='mb-0'>County: " + county + "</p><p class='mb-0'>Postal Code: " + postalCode + "</p><p class='mb-0'>Distance: " + distance + " km</p><a href='#'>Know More...</a></div>"
+			"<div id='point-" + index + "' class='map-point' style='height: 130px; overflow: auto; width: 270px;'><h5>Name: " + name + "</h5><p class='mb-0'>City: " + city + "</p><p class='mb-0'>County: " + county + "</p><p class='mb-0'>Postal Code: " + postalCode + "</p><p class='mb-0'>Distance: " + distance + " km</p><a class='map-point-link' href='#' data-toggle='modal' data-target='#hospital-modal' onclick='populateModal(this)'>Know More...</a></div>"
 		);
 		
 		// Add info bubble to the UI
 		ui.addBubble(bubble);
 	});
 }
+
+function populateModal(element) {
+	var parentId = $(element).parent().attr("id").split("-")[1];
+	var point = data[parentId];
+	
+	$("#hospital-modal #hospital-name").text(point.title);
+	$("#hospital-modal #hospital-city").text(point.city);
+	$("#hospital-modal #hospital-county").text(point.county);
+	$("#hospital-modal #hospital-country").text(point.countryName);
+	$("#hospital-modal #hospital-postal-code").text(point.postalCode);
+	$("#hospital-modal #hospital-icu").text(point.icu);
+	$("#hospital-modal #hospital-covid").text(point.covid);
+	$("#hospital-modal #hospital-cardiology").text(point.cardiology);
+	$("#hospital-modal #hospital-neurology").text(point.neurology);
+	$("#hospital-modal #hospital-xray").text(point.xray);
+	$("#hospital-modal #hospital-mri").text(point.mri);
+	$("#hospital-modal #hospital-distance").text((point.distance/1000).toFixed(2));
+}
+
+//$(".map-point").click(function() {
+//	alert("HELLO")
+////	console.log("Hello");
+//	$('#hospital-modal').modal('show');
+//})
