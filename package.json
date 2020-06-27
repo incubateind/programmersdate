@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "https": "^1.0.0",
+    "mongoose": "^5.9.20",
     "request": "^2.88.2",
     "whatwg-fetch": "^3.0.0"
   }

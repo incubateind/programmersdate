@@ -1,4 +1,4 @@
-var Hospital = require("./Hospital");
+var Hospital = require("./Hospital_Class");
 
 // var lat = 12.96643;
 // var lng = 77.5871;
