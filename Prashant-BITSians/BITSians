@@ -1,0 +1,90 @@
+Name of the project - Here Maps : BITSians
+
+Team Name : BITSians
+
+Link to the project : https://maps-bitsian.herokuapp.com/
+
+--------------------------------
+
+Description of the project :
+
+        Here Maps : BITSians is a load balancing project for medical facilities and health care units using HERE Maps APIs. HERE Map APIs provide accurate, comprehensive and highly interactive maps and is the go-to destination for location services for any need, from public sector and infrastructure to healthcare, from transportation and logistics to media. 
+
+        The project includes a dynamic map embedded as a part of the single page web application. The project aims at providing most efficient and effective usage of available medical facilities, without adding any extra burden to any specific unit(s). Not only does it provide data on number of beds and ventilators available, but also maps their utilization values. This makes it very convenient for the patient to decide on which hospital to choose. 
+
+        The web application is also equipped with multiple features like looking for (nearest + fastest) emergency service(s), dynamic routing, discovering medical units based on its speciliaties and expertise, and what not. Also, the application is equipped with an AI based bot to guide the user through different functionalities available on the site. 
+
+        For future releases, developers are planning to shift from dynamic to realtime database in order to receive real time updates from various healthcare and medical units on data concerning bed numbers and its timely utilization values. Also, the project holds amazing capabilites as a product and can easily be scaled to serve a larger audience.
+        
+--------------------------------        
+
+Aim of the project :
+
+        The project is aimed at reducing the affect of low density in terms of medical staff and healthcare resources that are available in most of the developing socities.
+
+--------------------------------
+
+Contents of project directory :
+
+|_ BITSians
+        |_ models
+                |_ esri.js
+        |_ node_modules
+                |_ ((includes npm dependencies))
+        |_ public
+                |_ creds.js
+                |_ dark-theme.css
+                |_ design.js
+                |_ end.pmg
+                |_ geocoder.js
+                |_ gps.png
+                |_ hospital.png
+                |_ light-theme.css
+                |_ map_style.yaml
+                |_ robot.png
+                |_ routing.js
+                |_ start.png
+                |_ styles.css
+                |_ via.png
+        |_ views
+                |_ partials
+                        |_ footer.ejs
+                        |_ header.ejs
+                |_ about.ejs
+                |_ contact.ejs
+                |_ index.ejs
+                |_ technology.ejs
+        |_ README.md
+        |_ app.js
+        |_ package-lock.json
+        |_ package.json
+
+--------------------------------
+        
+Ways to host the project on localhost :
+        
+        Step 1 : Download and Install NodeJS and NPM packages from nodejs.org, or just use the following commands in your terminal window :
+        
+                        sudo apt-get install nodejs
+                        sudo apt-get install npm
+                                                                                
+        Step 2 : Install the http-server package from npm. Use the following command in your command prompt or terminal window :
+        
+                        npm install -g http-server
+                
+        Step 3 : Navigate to the project directory using the command line interface and use :
+                
+                        node app.js
+                        
+        Step 4 : Now, open your browser and navigate to http://localhost:31000/ to access the project.
+        
+        OR, 
+        
+        you may access the project @ https://maps-bitsian.herokuapp.com/
+
+--------------------------------
+        
+Contact the developers:
+
+        Prashant [f20180332@goa.bits-pilani.ac.in]
+        Sudhanshu [f20180319@goa.bits-pilani.ac.in] 
