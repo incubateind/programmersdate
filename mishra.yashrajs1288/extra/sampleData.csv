@@ -1,0 +1,10 @@
+hospitalName,longitude,latitude,emergencyContact,availableBed
+ABC hospital1,73.700088,26.179662,7568851001,10
+ABC hospital2,72,26.179662,7568851001,9
+ABC hospital3,71,26,7568851001,8
+ABC hospital4,76,26,7568851001,7
+ABC hospital5,75,25,7568851001,6
+ABC hospital6,77,25,7568851001,5
+ABC hospital7,74,24,7568851001,4
+ABC hospital8,74,23,7568851001,3
+ABC hospital9,75,22,7568851001,2

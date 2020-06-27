@@ -1,0 +1,57 @@
+button {
+    font-size: 22px;
+  font-family: "Fira Code", monospace;
+  margin-top: 15px;
+  width: 100%;
+  background: none;
+  text-align: center;
+  background-image: none;
+  border: 2px solid $my-color2;
+  color: #fff;
+  background-color: $my-color2;
+  border-radius: 5px;
+
+}
+input[type="text"] {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  text-align: center;
+  background-image: none;
+  border: 3px solid $my-color2;
+  color: $my-color2;
+  border-radius: 0;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  &:focus {
+    outline: 0;
+    border-color: $my-color;
+  }
+}
+input[type="number"] {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  text-align: center;
+  background-image: none;
+  border: 3px solid $my-color2;
+  color: $my-color2;
+  border-radius: 0;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  &:focus {
+    outline: 0;
+    border-color: $my-color;
+  }
+}
+.form {
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
