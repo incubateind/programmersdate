@@ -60,7 +60,29 @@ window.onload = function () {
 
 function generateMap(map, mapData) {
 //	console.log(mapData);
+	plotCurrentLocation(latitude, longitude);
 	mapData.forEach(plotPoint);
+}
+
+function plotCurrentLocation(latitude, longitude) {
+	var locationMarker = new H.map.Marker({ lat: latitude, lng: longitude });
+	
+	// Add the marker to the map
+	map.addObject(locationMarker);
+	
+	// Add event listener to the marker
+	locationMarker.addEventListener('tap', function(evt) {
+		// Create an info bubble object at a specific geographic location
+		var bubble = new H.ui.InfoBubble({ lng: longitude, lat: latitude }, {
+                content: ''
+             });
+		bubble.setContent(
+			"<div><h5>You are here!</h5></div>"
+		);
+		
+		// Add info bubble to the UI
+		ui.addBubble(bubble);
+	});
 }
 
 function plotPoint(point) {
@@ -73,7 +95,7 @@ function plotPoint(point) {
 	var county = point.address.county;
 	var country = point.address.countryName;
 	var postalCode = point.address.postalCode;
-	var distance = point.distance;
+	var distance = (point.distance/1000).toFixed(2);
 	
 	var locationMarker = new H.map.Marker({ lat: lat, lng: lng });
 	
