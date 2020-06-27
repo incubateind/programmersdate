@@ -56,10 +56,32 @@ window.onload = function () {
 			console.log(error);
 		}
 	});
-	
-//  	moveMapToBerlin(map);
 }
 
 function generateMap(map, mapData) {
-	console.log(mapData)
+//	console.log(mapData);
+	mapData.forEach(plotPoint);
+}
+
+function plotPoint(point) {
+	console.log(point);
+	var lat = point.position.lat;
+	var lng = point.position.lng;
+	
+	var locationMarker = new H.map.Marker({ lat: lat, lng: lng });
+	
+	// Add the marker to the map
+	map.addObject(locationMarker);
+	
+	// Add event listener to the marker
+	locationMarker.addEventListener('tap', function(evt) {
+		// Create an info bubble object at a specific geographic location
+		var bubble = new H.ui.InfoBubble({ lng: lng, lat: lat }, {
+                content: ''
+             });
+		bubble.setContent('<div style="height: 130px; overflow: auto; width: 270px;"><h3>"First Input"</h3><p>"Second Input"</p></div>');
+		
+		// Add info bubble to the UI
+		ui.addBubble(bubble);
+	});
 }
