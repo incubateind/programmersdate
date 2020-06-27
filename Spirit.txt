@@ -1,0 +1,30 @@
+Description:
+	We chose the Track a bed track.
+	The basic idea for the challenge is that we are using Google cloud Places API to look for nearest hospitals around the user.
+	These hospitals appear as markers on the maps Flutter application.
+	It is necessary for a hospital to first be affiliated with the app, i.e, they need to register to the service using their unique login details that are provided to them.
+	This is done to make sure that the search results include hospitals that actually have COVID care available instead of just putting all the hospitals out there.
+	This will also ensure easy database entry, i.e., we can easily enter the available bed information as well as other facilities.
+	To differentiate between markers we are using three colors: red, blue and green.
+	A marker is red when a hospital isn't registered but is still in the vicinity,
+		a marker is yellow when the hospital doesn't have beds and facilities available and
+		a marker is green if it has beds and facilities.
+		
+The contents of project directory:
+	The project directory is present in the Spirit folder under the name, incubate_bed.
+	This application is made using Flutter framework.
+	lib folder contains the main project files.
+		In lib, we have the main file and pages directory.
+			Now, from the main file, we use the HomepageUser file to navigate between Home, Maps and Profile.
+			Variables folder contains variables for HomepageUser.
+			MapsMain contains MainMapBody.
+			HomeBody contains MainHomeBody.
+			AuthenticationHandler containes AuthenticationClass, Edit Screen, ProfilePage, RegistrationDetails, Signin and Signup files.
+				
+How to run the app from localhost:
+	Install the flutter SDK.
+	Make sure the environment variables are set for flutter/bin
+	Open the flutter project in VSCode or Android studios.
+	Open terminal, and type "flutter clean"
+	Then type, "flutter pub get"
+	Then type, "flutter run" //Make sure you are connected to a emulator or a android device.
