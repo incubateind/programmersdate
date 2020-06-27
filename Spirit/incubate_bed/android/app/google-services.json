@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "499937151720",
+    "firebase_url": "https://incubatebed.firebaseio.com",
+    "project_id": "incubatebed",
+    "storage_bucket": "incubatebed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499937151720:android:848d2fda4a4ec53bb0575d",
+        "android_client_info": {
+          "package_name": "com.alfredo.incubate_bed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499937151720-mle6ibclnk2v50v22detd0t05vg3n035.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO8-wj1aNDxy1zdW_7TejvOHoy38lfG74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499937151720-mle6ibclnk2v50v22detd0t05vg3n035.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
